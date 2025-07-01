@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useGetUserReposQuery } from "@/services/githubApi";
 import { ChevronDown, ChevronUp, Star } from "lucide-react";
+import { Spinner } from "./ui/ios-spinner";
 
 export default function UserCard({ username }: { username: string }) {
   const [expanded, setExpanded] = useState(false);
@@ -21,7 +22,9 @@ export default function UserCard({ username }: { username: string }) {
       {expanded && (
         <div className="mt-3">
           {isLoading ? (
-            <p>Loading repos...</p>
+            <div className="flex justify-center">
+              <Spinner size="lg" />
+            </div>
           ) : (
             repos.map((repo) => (
               <div key={repo.id} className="bg-gray-100 p-2 rounded mb-2">

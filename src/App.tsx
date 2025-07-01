@@ -4,6 +4,7 @@ import { setQuery } from "@/features/searchSlice";
 import { useSearchUsersQuery } from "@/services/githubApi";
 import SearchBar from "@/components/SearchBar";
 import UserCard from "@/components/UserCard";
+import { Spinner } from "./components/ui/ios-spinner";
 
 export default function App() {
   const dispatch = useAppDispatch();
@@ -31,7 +32,11 @@ export default function App() {
         onSearch={handleSearch}
       />
 
-      {isLoading && <p className="text-center mt-4">Loading users...</p>}
+      {isLoading && (
+        <div className="flex justify-center mt-6">
+          <Spinner size="lg" />
+        </div>
+      )}
       {error && (
         <p className="text-center mt-4 text-red-500">Failed to fetch users.</p>
       )}
