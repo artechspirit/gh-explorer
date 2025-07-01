@@ -33,7 +33,7 @@ A sleek, responsive web application built with React + TypeScript to explore Git
 - 🔁 Centralized state with **Redux Toolkit**
 - ⚡ API integration with **RTK Query**
 - 🧪 Fully tested with **Vitest** & **React Testing Library**
-- 📦 Public repository & deployed via GitHub Pages
+- 📦 Public repository & deployed via Vercel
 
 ---
 
@@ -45,7 +45,7 @@ A sleek, responsive web application built with React + TypeScript to explore Git
 | Styling    | Tailwind CSS, shadcn/ui              |
 | State      | Redux Toolkit, RTK Query             |
 | Testing    | Vitest, Testing Library              |
-| Deployment | GitHub Pages                         |
+| Deployment | Vercel                               |
 
 ---
 
@@ -54,8 +54,8 @@ A sleek, responsive web application built with React + TypeScript to explore Git
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/github-explorer.git
-cd github-explorer
+git clone https://github.com/artechspirit/gh-explorer.git
+cd gh-explorer
 ```
 
 ### 2. Install dependencies
@@ -64,7 +64,15 @@ cd github-explorer
 npm install
 ```
 
-### 3. Start development
+### 3. Add environment variables
+
+Create a `.env` file in the root of the project and add your GitHub personal access token:
+
+```env
+VITE_GITHUB_TOKEN=your-github-token
+```
+
+### 4. Start development
 
 ```bash
 npm run dev
@@ -82,42 +90,8 @@ Run all tests:
 npm run test
 ```
 
-With coverage report:
-
-```bash
-npm run test -- --coverage
-```
-
 ---
 
-## 🚀 Deployment (GitHub Pages)
-
-1. Update `vite.config.ts`:
-
-```ts
-export default defineConfig({
-  base: "/gh-explorer/",
-  plugins: [react()],
-})
-```
-
-2. Add the deploy script to `package.json`:
-
-```json
-"scripts": {
-  "build": "vite build",
-  "deploy": "vite build && gh-pages -d dist"
-}
-```
-
-3. Deploy:
-
-```bash
-npm install --save-dev gh-pages
-npm run deploy
-```
-
----
 
 ## 📂 Folder Structure
 
@@ -126,7 +100,7 @@ src/
 ├── components/         # UI components (SearchBar, UserCard)
 ├── features/           # Redux slice for search state
 ├── services/           # GitHub API via RTK Query
-├── test/              # MSW and test setup
+├── test/               # test setup
 ├── hooks.ts            # Typed Redux hooks
 ├── store.ts            # Redux store
 ├── App.tsx             # Root component
@@ -154,5 +128,4 @@ This project is licensed under the [MIT License](LICENSE)
 - [GitHub REST API](https://docs.github.com/en/rest)
 - [shadcn/ui](https://ui.shadcn.com/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
-- [MSW](https://mswjs.io/)
 - [Vitest](https://vitest.dev/)
