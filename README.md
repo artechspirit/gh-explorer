@@ -9,7 +9,7 @@ A sleek, responsive web application built with React + TypeScript to explore Git
 
 ## 🔗 Live Demo
 
-🌍 [https://artechspirit.github.io/gh-explorer](https://your-github-username.github.io/github-explorer)
+🌍 [https://gh-explorer-chi.vercel.app](https://gh-explorer-chi.vercel.app)
 
 ---
 
