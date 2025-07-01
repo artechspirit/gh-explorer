@@ -25,7 +25,7 @@ export default function UserCard({ username }: { username: string }) {
             <div className="flex justify-center">
               <Spinner size="lg" />
             </div>
-          ) : (
+          ) : repos.length > 0 ? (
             repos.map((repo) => (
               <div key={repo.id} className="bg-gray-100 p-2 rounded mb-2">
                 <div className="flex justify-between">
@@ -37,6 +37,8 @@ export default function UserCard({ username }: { username: string }) {
                 <p className="text-gray-600 text-sm">{repo.description}</p>
               </div>
             ))
+          ) : (
+            <p className="text-gray-600 text-sm">No repositories found</p>
           )}
         </div>
       )}
