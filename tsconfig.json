@@ -5,6 +5,13 @@
       "@/*": ["./src/*"]
     },
   },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "src/test"
+  ],
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },

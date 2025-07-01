@@ -11,8 +11,6 @@ A sleek, responsive web application built with React + TypeScript to explore Git
 
 🌍 [https://artechspirit.github.io/gh-explorer](https://your-github-username.github.io/github-explorer)
 
-> Replace with actual deployed URL after running `npm run deploy`
-
 ---
 
 ## 📸 Screenshots
